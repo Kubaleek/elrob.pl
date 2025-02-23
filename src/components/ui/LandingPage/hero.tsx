@@ -1,6 +1,6 @@
 import { DotPattern } from "@/components/magicui/dot-pattern";
 import { Button } from "@/components/shadcn/button";
-import { BadgeCheckIcon, ChevronRightIcon, Mail, Phone} from "lucide-react";
+import { BadgeCheckIcon, ChevronRightIcon, Mail, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 export default function Hero() {
   return (
@@ -8,8 +8,8 @@ export default function Hero() {
       <div className="grid grid-cols-12 lg:gap-7 xl:gap-12 h-full z-[1]">
         <div className="col-span-12 lg:col-span-6 md:pl-12 lg:pl-11 xl:pl-24 pt-1 lg:pt-0 lg:h-[500px] justify-center flex flex-col gap-6">
           <div className="flex flex-col gap-4">
-            <div className="flex flex-col gap-4">
-              <h1 className="text-4xl xl:text-6xl font-bold leading-10 text-[#fafafa]">
+            <div className="flex flex-col gap-2">
+              <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold leading-10 text-[#fafafa]">
                 EL ROB Elektro Usługi
               </h1>
               <p className="max-w-xl leading-7 text-gray-300">
@@ -47,12 +47,11 @@ export default function Hero() {
           </div>
         </div>
         <div className="col-span-12 lg:col-span-6 justify-center relative items-center hidden overflow-hidden   lg:flex flex-col gap-6">
-        <DotPattern
-        className={cn(
-          "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] py-8",
-        )}
-      />
-
+          <DotPattern
+            className={cn(
+              "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] xl:[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] text-[#ff7757] stroke-[#ff7757] fill-[#ff7757] py-8",
+            )}
+          />
         </div>
       </div>
     </section>
