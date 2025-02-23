@@ -4,7 +4,6 @@ import "@/styles/globals.css";
 import Navbar from "@/components/ui/navbar";
 import WebsiteMounted from "@/lib/isMounted";
 import { ThemeProvider } from "@/provider/theme-provider";
-import { TracingBeam } from "@/components/acernityui/tracing-beam";
 
 const interSans = Inter({
   variable: "--font-inter",
@@ -30,13 +29,11 @@ export default function RootLayout({
       >
         <WebsiteMounted>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-            <div className="max-w-9xl mx-auto lg:px-11 px-6 pt-3">
+            <div className="max-w-9xl mx-auto lg:px-11 px-6 pb-8 pt-3">
               <Navbar />
-              <TracingBeam>
-                <main className="overflow-hidden">
+                <main>
                     {children}
                 </main>
-              </TracingBeam>
             </div>
           </ThemeProvider>
         </WebsiteMounted>

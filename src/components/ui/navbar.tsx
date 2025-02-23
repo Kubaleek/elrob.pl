@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky left-0 top-0 z-40 w-full bg-[#0C0C0C]/90 backdrop-blur-lg py-1">
-      <nav className="mx-auto flex w-full items-center justify-between gap-3 py-3">
+      <nav className="mx-auto flex max-w-[83rem] w-full items-center justify-between gap-3 py-3">
         <Link href={"/"} className="flex items-center gap-3">
           <Image src={"/logo.svg"} width={32} height={32} alt="EL ROB Elektro Usługi Logo" />
           <span className="font-medium text-lg">

@@ -30,6 +30,8 @@ export const TracingBeam = ({
     }
   }, []);
 
+  const windowHeight = typeof window !== 'undefined' ? window.innerHeight : 0;
+
   const y1 = useSpring(
     useTransform(scrollYProgress, [0, 0.8], [50, svgHeight]),
     {
@@ -48,7 +50,7 @@ export const TracingBeam = ({
   return (
     <motion.div
       ref={ref}
-      className={cn("relative w-full max-w-9xl mx-auto h-screen", className)}
+      className={cn("relative w-full max-w-9xl mx-auto max-h-dvh", className)} // zmiana na h-screen, aby zajmowało całą wysokość ekranu
     >
       <div className="absolute -left-4 md:-left-6 top-3 hidden md:block">
         <motion.div
@@ -121,7 +123,9 @@ export const TracingBeam = ({
           </defs>
         </svg>
       </div>
-      <div ref={contentRef}>{children}</div>
+      <div ref={contentRef} style={{ minHeight: windowHeight }}>
+        {children}
+      </div>
     </motion.div>
   );
 };

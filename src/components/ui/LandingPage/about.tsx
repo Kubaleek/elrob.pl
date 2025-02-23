@@ -6,10 +6,10 @@ export default function About() {
   return (
     <section className=" relative  items-center flex justify-start lg:justify-center mt-8 lg:mt-20 overflow-hidden">
       <div className="grid grid-cols-12 lg:gap-7 xl:gap-12 z-[1]">
-        <div className="col-span-12 hidden md:flex md:col-span-6 md:pl-12 lg:pl-11 xl:pl-24 h-full justify-center  flex-col gap-6">
+        <div className="col-span-12 hidden md:flex md:col-span-6 md:pl-2 lg:pl-0 xl:pl-24 h-full justify-center  flex-col gap-6">
           <div className="relative">
-            <Android className="size-full bg-center bg-cover md:p-0 lg:p-12 z-[0]" src="./1.jpg" />
-            <DotPattern className="[mask-image:radial-gradient(100px_circle_at_center,white,transparent)] xl:[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] lg:[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] absolute top-0 left-16 z-[-1] stroke-[#ff7757] fill-[#ff7757]" />
+            <Android className="size-full bg-center bg-cover md:p-0 z-[0]" src="./1.jpg" />
+            <DotPattern className="[mask-image:radial-gradient(200px_circle_at_top_right,white,transparent)] xl:[mask-image:radial-gradient(400px_circle_at_top_right,white,transparent)] lg:[mask-image:radial-gradient(400px_circle_at_top_right,white,transparent)] absolute top-0 -left-3 lg:left-2 z-[-1] stroke-[#ff7757] fill-[#ff7757]" />
           </div>
         </div>
         <div className="col-span-12 md:col-span-6 justify-start md:pl-0 lg:pt-16 flex flex-col gap-8  items-start">
