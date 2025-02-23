@@ -148,11 +148,3 @@
   }
 }
 
-
-
-@media screen and (min-width: 768px) {
-  .bgAbout {
-    background: url("../../public/bg.svg");
-    background-size: cover;
-  }
-}
