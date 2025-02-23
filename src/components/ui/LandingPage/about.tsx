@@ -49,7 +49,7 @@ export default function About() {
             </Button>
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-6 justify-center relative items-center hidden  lg:flex flex-col gap-6 drop-shadow-[0_0_10px_#ef9c00]">
+        <div className="col-span-12 lg:col-span-6 justify-center relative items-center hidden overflow-hidden  lg:flex flex-col gap-6 drop-shadow-[0_0_10px_#ef9c00]">
           <div className="z-[-1] absolute top-12 min-h-60 -rotate-6 items-center justify-center  max-w-sm flex flex-col gap-3 p-4">
             <LightbulbIcon className="lg:w-32 lg:h-32 xl:w-36 xl:h-36" />
           </div>
