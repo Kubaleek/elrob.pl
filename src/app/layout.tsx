@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Inter } from "next/font/google";
+import "@/styles/globals.css";
+import Navbar from "@/components/ui/navbar";
+import WebsiteMounted from "@/lib/isMounted";
+import { ThemeProvider } from "@/provider/theme-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const interSans = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: "200",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +25,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${interSans.variable} antialiased text-[#fafafa] bg-[#0C0C0C] text-sm sm:text-base  max-h-svh`}
       >
-        {children}
+        <WebsiteMounted>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+            <div className="max-w-9xl mx-auto lg:px-11 px-6 pt-3">
+              <Navbar />
+              <main className="">
+                  {children}
+              </main>
+            </div>
+          </ThemeProvider>
+        </WebsiteMounted>
       </body>
     </html>
   );
