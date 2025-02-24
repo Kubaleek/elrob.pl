@@ -1,10 +1,20 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 export default function Footer() {
   return (
-    <footer className="flex flex-col mt-12 mx-auto max-w-[85rem] gap-3 w-full ">
+    <footer className="flex flex-col mt-12 mx-auto max-w-[85rem] gap-3 w-full">
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6">
-        <div className="flex flex-col gap-3">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-3"
+        >
           <Link href={"/"} className="flex w-fit items-center gap-3">
             <Image src={"/logo.svg"} width={32} height={32} alt="EL ROB Elektro Usługi Logo" />
             <span className="font-medium text-lg">
@@ -24,23 +34,30 @@ export default function Footer() {
           <p className="leading-7 text-sm text-gray-300">
             Strona internetowa stworzona przez KubalekDev
           </p>
-        </div>
-        <div className="hidden lg:grid justify-self-end grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="hidden lg:grid justify-self-end grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8"
+        >
           <div className="space-y-3">
             <h3 className="font-semibold text-lg">Strony</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-muted-foreground hover:text-foreground" >
+                <Link href="/" className="text-muted-foreground hover:text-foreground">
                   Strona Główna
                 </Link>
               </li>
               <li>
-                <Link href="/galeria" className="text-muted-foreground hover:text-foreground" >
+                <Link href="/galeria" className="text-muted-foreground hover:text-foreground">
                   Galeria
                 </Link>
               </li>
               <li>
-                <Link href="/kontakt" className="text-muted-foreground hover:text-foreground" >
+                <Link href="/kontakt" className="text-muted-foreground hover:text-foreground">
                   Kontakt
                 </Link>
               </li>
@@ -50,17 +67,17 @@ export default function Footer() {
             <h3 className="font-semibold text-lg">O Firmie</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/uprawnienia" className="text-muted-foreground hover:text-foreground" >
+                <Link href="/uprawnienia" className="text-muted-foreground hover:text-foreground">
                   Uprawnienia
                 </Link>
               </li>
               <li>
-                <Link href="/realizacje" className="text-muted-foreground hover:text-foreground" >
+                <Link href="/realizacje" className="text-muted-foreground hover:text-foreground">
                   Realizacje
                 </Link>
               </li>
               <li>
-                <Link href="/opinie" className="text-muted-foreground hover:text-foreground" >
+                <Link href="/opinie" className="text-muted-foreground hover:text-foreground">
                   Opinie
                 </Link>
               </li>
@@ -70,42 +87,67 @@ export default function Footer() {
             <h3 className="font-semibold text-lg">Oferta</h3>
             <ul className="space-y-3">
               <li>
-                <Link href={"/montaz-i-modernizacja-instalacji-elektrycznych"} className="text-muted-foreground hover:text-foreground">
-                    Montaż i modernizacja instalacji elektrycznych
+                <Link
+                  href={"/montaz-i-modernizacja-instalacji-elektrycznych"}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  Montaż i modernizacja instalacji elektrycznych
                 </Link>
               </li>
               <li>
-                <Link href={"/fotowoltaika-Instalacje-solarne"} className="text-muted-foreground hover:text-foreground">
-                    Fotowoltaika Instalacje solarne
+                <Link
+                  href={"/fotowoltaika-Instalacje-solarne"}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  Fotowoltaika Instalacje solarne
                 </Link>
               </li>
               <li>
-                <Link href={"/aparatura-kontrolno-pomiarowa-i-automatyka"} className="text-muted-foreground hover:text-foreground">
-                    Aparatura kontrolno-pomiarowa i automatyka
+                <Link
+                  href={"/aparatura-kontrolno-pomiarowa-i-automatyka"}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  Aparatura kontrolno-pomiarowa i automatyka
                 </Link>
               </li>
               <li>
-                <Link href={"/urzadzenia-w-wykonaniu-przeciwwybuchowym"} className="text-muted-foreground hover:text-foreground">
-                    Urządzenia w wykonaniu przeciwwybuchowym
+                <Link
+                  href={"/urzadzenia-w-wykonaniu-przeciwwybuchowym"}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  Urządzenia w wykonaniu przeciwwybuchowym
                 </Link>
               </li>
               <li>
-                <Link href={"/serwis-i-konserwacja-urzadzen-elektrotermicznych"} className="text-muted-foreground hover:text-foreground">
-                    Serwis i konserwacja urządzeń elektrotermicznych
+                <Link
+                  href={"/serwis-i-konserwacja-urzadzen-elektrotermicznych"}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  Serwis i konserwacja urządzeń elektrotermicznych
                 </Link>
               </li>
               <li>
-                <Link href={"/instalacja-i-konserwacja-oswietlenia-ulicznego"} className="text-muted-foreground hover:text-foreground">
-                    Instalacja i konserwacja oświetlenia ulicznego
+                <Link
+                  href={"/instalacja-i-konserwacja-oswietlenia-ulicznego"}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  Instalacja i konserwacja oświetlenia ulicznego
                 </Link>
               </li>
             </ul>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <p className="leading-7 text-sm text-gray-300">
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="leading-7 text-sm text-gray-300"
+      >
         © {new Date().getFullYear()} EL ROB Elektro Usługi Robert Król. Wszelkie prawa zastrzeżone.
-      </p>
+      </motion.p>
     </footer>
   );
 }

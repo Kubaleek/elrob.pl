@@ -1,18 +1,40 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { DotPattern } from "@/components/magicui/dot-pattern";
 import { Button } from "@/components/shadcn/button";
 import { BadgeCheckIcon, ChevronRightIcon, Mail, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+
 export default function Hero() {
   return (
-    <section className=" relative  items-center flex justify-start">
+    <section className="relative items-center flex justify-start">
       <div className="grid grid-cols-12 lg:gap-7 xl:gap-12 h-full z-[1]">
         <div className="col-span-12 lg:col-span-6 md:pl-2 lg:pl-0 2xl:pl-24 pt-1 lg:pt-0 lg:h-[500px] justify-center flex flex-col gap-6">
-          <div className="flex flex-col gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex flex-col gap-4"
+          >
             <div className="flex flex-col gap-2">
-              <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold leading-10 text-[#fafafa]">
+              <motion.h1
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-2xl md:text-4xl xl:text-6xl font-bold leading-10 text-[#fafafa]"
+              >
                 EL ROB Elektro Usługi
-              </h1>
-              <p className="lg:max-w-xl leading-7 text-gray-300">
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="lg:max-w-xl leading-7 text-gray-300"
+              >
                 Czy szukasz <span className="text-[#ff7757]">dobrego elektryka</span> w{" "}
                 <span className="text-[#ff7757]">Łodzi</span> i województwie{" "}
                 <span className="text-[#ff7757]">łódzkim</span>? Świadczymy{" "}
@@ -20,9 +42,15 @@ export default function Hero() {
                 wiedzy i <span className="text-[#ff7757]">wieloletniego doświadczenia</span>. Dzięki
                 temu jesteśmy w stanie sprostać nawet{" "}
                 <span className="text-[#ff7757]">najbardziej wymagającym zleceniom</span>.
-              </p>
+              </motion.p>
             </div>
-            <div className="flex flex-col gap-5">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-5"
+            >
               <div className="flex items-center gap-2">
                 <BadgeCheckIcon className="text-[#ff7757]" />
                 <p>Doświadczenie i Profesjonalizm</p>
@@ -31,9 +59,15 @@ export default function Hero() {
                 <BadgeCheckIcon className="text-[#ff7757]" />
                 <p>Gwarancja Satysfakcji Klienta</p>
               </div>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-3">
+            </motion.div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            viewport={{ once: true }}
+            className="flex flex-col sm:flex-row gap-3"
+          >
             <Button size={"lg"} className="px-3 group">
               <Mail className="group-hover:text-[#ff7757] transition-all duration-100 ease-in-out" />
               <span>Wyślij Wiadomość</span>
@@ -44,15 +78,21 @@ export default function Hero() {
               <span>Zadzwoń już</span>
               <ChevronRightIcon className="group-hover:text-[#ff7757] group-hover:translate-x-0.5 transition-all duration-100 ease-in-out" />
             </Button>
-          </div>
+          </motion.div>
         </div>
-        <div className="col-span-12 lg:col-span-6 justify-center relative items-center hidden lg:flex flex-col gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="col-span-12 lg:col-span-6 justify-center relative items-center hidden lg:flex flex-col gap-6"
+        >
           <DotPattern
             className={cn(
               "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] xl:[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] text-[#ff7757] stroke-[#ff7757] fill-[#ff7757]",
             )}
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
