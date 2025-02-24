@@ -1,3 +1,5 @@
+import { ShootingStars } from "@/components/acernityui/shooting-stars";
+import { StarsBackground } from "@/components/acernityui/stars-background";
 import Android from "@/components/magicui/android";
 import { DotPattern } from "@/components/magicui/dot-pattern";
 import { AudioWaveformIcon, FolderClock, WorkflowIcon } from "lucide-react";
@@ -5,6 +7,8 @@ import { AudioWaveformIcon, FolderClock, WorkflowIcon } from "lucide-react";
 export default function About() {
   return (
     <section className=" relative  items-center flex justify-start lg:justify-center mt-8 lg:mt-20 overflow-hidden">
+      <StarsBackground />
+      <ShootingStars />
       <div className="grid grid-cols-12 lg:gap-7 xl:gap-12 z-[1]">
         <div className="col-span-12 hidden md:flex md:col-span-6 md:pl-2 lg:pl-0 xl:pl-24 h-full justify-center  flex-col gap-6">
           <div className="relative">

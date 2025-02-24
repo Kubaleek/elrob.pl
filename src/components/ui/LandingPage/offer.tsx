@@ -18,7 +18,7 @@ export default function Offer() {
               <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold leading-10 text-[#fafafa]">
                 EL ROB Elektro Oferta
               </h1>
-              <p className="max-w-xl leading-7 text-gray-300">
+              <p className="lg:max-w-xl leading-7 text-gray-300">
                 Każdą usługę wykonujemy z pełnym{" "}
                 <span className="text-[#ff7757]">zaangażowaniem</span>, dbając o{" "}
                 <span className="text-[#ff7757]">bezpieczeństwo</span> i{" "}

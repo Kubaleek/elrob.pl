@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CustomGalleryGrid({ images }: { images: string[][] }) {
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-4  border-t border-r pr-5  pt-5">
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-5  border p-5">
       {images.map((column, colIndex) => (
         <div
           key={colIndex}
@@ -14,8 +14,8 @@ export default function CustomGalleryGrid({ images }: { images: string[][] }) {
                 className="h-auto max-w-full rounded-lg object-cover object-center"
                 src={src}
                 alt={`gallery-photo-${colIndex}-${imgIndex}`}
-                width={320}
-                height={320}
+                width={250}
+                height={250}
               />
             </div>
           ))}

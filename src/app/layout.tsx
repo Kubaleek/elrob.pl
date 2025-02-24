@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import Navbar from "@/components/ui/navbar";
 import WebsiteMounted from "@/lib/isMounted";
 import { ThemeProvider } from "@/provider/theme-provider";
+import Footer from "@/components/ui/footer";
 
 const interSans = Inter({
   variable: "--font-inter",
@@ -34,6 +35,7 @@ export default function RootLayout({
                 <main>
                     {children}
                 </main>
+              <Footer />
             </div>
           </ThemeProvider>
         </WebsiteMounted>

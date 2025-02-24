@@ -12,7 +12,7 @@ export default function Hero() {
               <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold leading-10 text-[#fafafa]">
                 EL ROB Elektro Usługi
               </h1>
-              <p className="max-w-xl leading-7 text-gray-300">
+              <p className="lg:max-w-xl leading-7 text-gray-300">
                 Czy szukasz <span className="text-[#ff7757]">dobrego elektryka</span> w{" "}
                 <span className="text-[#ff7757]">Łodzi</span> i województwie{" "}
                 <span className="text-[#ff7757]">łódzkim</span>? Świadczymy{" "}
@@ -49,7 +49,7 @@ export default function Hero() {
         <div className="col-span-12 lg:col-span-6 justify-center relative items-center hidden lg:flex flex-col gap-6">
           <DotPattern
             className={cn(
-              "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] xl:[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] text-[#ff7757] stroke-[#ff7757] fill-[#ff7757] py-8",
+              "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] xl:[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] text-[#ff7757] stroke-[#ff7757] fill-[#ff7757]",
             )}
           />
         </div>
