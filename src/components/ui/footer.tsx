@@ -44,7 +44,7 @@ export default function Footer() {
           className="hidden lg:grid justify-self-end grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8"
         >
           <div className="space-y-3">
-            <h3 className="font-semibold text-lg">Strony</h3>
+            <h2 className="font-semibold text-lg">Strony</h2>
             <ul className="space-y-3">
               <li>
                 <Link href="/" className="text-muted-foreground hover:text-foreground">
@@ -64,7 +64,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="font-semibold text-lg">O Firmie</h3>
+            <h2 className="font-semibold text-lg">O Firmie</h2>
             <ul className="space-y-3">
               <li>
                 <Link href="/uprawnienia" className="text-muted-foreground hover:text-foreground">
@@ -84,7 +84,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="space-y-3 lg:col-span-2">
-            <h3 className="font-semibold text-lg">Oferta</h3>
+            <h2 className="font-semibold text-lg">Oferta</h2>
             <ul className="space-y-3">
               <li>
                 <Link

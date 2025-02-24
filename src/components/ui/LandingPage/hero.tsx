@@ -73,10 +73,12 @@ export default function Hero() {
               <span>Wyślij Wiadomość</span>
               <ChevronRightIcon className="group-hover:text-[#ff7757] group-hover:translate-x-0.5 transition-all duration-100 ease-in-out" />
             </Button>
-            <Button size={"lg"} className="px-3 group">
+            <Button size={"lg"} className="px-3 group" asChild>
+              <a  href="mailto:robert.krol.el@gmail.com">
               <Phone className="group-hover:text-[#ff7757] transition-all duration-100 ease-in-out" />
               <span>Zadzwoń już</span>
               <ChevronRightIcon className="group-hover:text-[#ff7757] group-hover:translate-x-0.5 transition-all duration-100 ease-in-out" />
+              </a>
             </Button>
           </motion.div>
         </div>
