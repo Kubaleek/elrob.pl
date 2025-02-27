@@ -5,6 +5,7 @@ import { DotPattern } from "@/components/magicui/dot-pattern";
 import { Button } from "@/components/shadcn/button";
 import { BadgeCheckIcon, ChevronRightIcon, Mail, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -68,17 +69,19 @@ export default function Hero() {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-3"
           >
-            <Button size={"lg"} className="px-3 group">
-              <Mail className="group-hover:text-[#ff7757] transition-all duration-100 ease-in-out" />
-              <span>Wyślij Wiadomość</span>
-              <ChevronRightIcon className="group-hover:text-[#ff7757] group-hover:translate-x-0.5 transition-all duration-100 ease-in-out" />
+            <Button asChild size={"lg"} className="px-3 group">
+              <Link href={"/kontakt"}>
+                <Mail className="group-hover:text-[#ff7757] transition-all duration-100 ease-in-out" />
+                <span>Wyślij Wiadomość</span>
+                <ChevronRightIcon className="group-hover:text-[#ff7757] group-hover:translate-x-0.5 transition-all duration-100 ease-in-out" />
+              </Link>
             </Button>
             <Button size={"lg"} className="px-3 group" asChild>
-              <a  href="mailto:robert.krol.el@gmail.com">
-              <Phone className="group-hover:text-[#ff7757] transition-all duration-100 ease-in-out" />
-              <span>Zadzwoń już</span>
-              <ChevronRightIcon className="group-hover:text-[#ff7757] group-hover:translate-x-0.5 transition-all duration-100 ease-in-out" />
-              </a>
+              <Link href={"/kontakt"}>
+                <Phone className="group-hover:text-[#ff7757] transition-all duration-100 ease-in-out" />
+                <span>Zadzwoń już</span>
+                <ChevronRightIcon className="group-hover:text-[#ff7757] group-hover:translate-x-0.5 transition-all duration-100 ease-in-out" />
+              </Link>
             </Button>
           </motion.div>
         </div>
@@ -91,7 +94,7 @@ export default function Hero() {
         >
           <DotPattern
             className={cn(
-              "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] xl:[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] text-[#ff7757] stroke-[#ff7757] fill-[#ff7757]",
+              "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] xl:[mask-image:radial-gradient(250px_circle_at_center,white,transparent)] text-[#ff7757] stroke-[#ff7757] fill-[#ff7757]",
             )}
           />
         </motion.div>

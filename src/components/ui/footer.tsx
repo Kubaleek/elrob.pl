@@ -5,9 +5,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Footer() {
+
   return (
-    <footer className="flex flex-col mt-12 mx-auto max-w-[85rem] gap-3 w-full">
-      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6">
+    <footer className="flex flex-col mt-7 mx-auto max-w-[85rem] gap-3 w-full">
+      <div className={`grid  grid-cols-1 lg:grid-cols-2  lg:gap-6`}>
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -41,7 +42,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="hidden lg:grid justify-self-end grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8"
+          className="hidden lg:grid  justify-self-start  grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8"
         >
           <div className="space-y-3">
             <h2 className="font-semibold text-lg">Strony</h2>
