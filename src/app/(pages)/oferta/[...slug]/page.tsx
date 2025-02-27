@@ -1,14 +1,25 @@
 "use client";
 
+import createOfferMap from "@/lib/offerMap";
+import { notFound, useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { DotPattern } from "@/components/magicui/dot-pattern";
 
-export default function ContactPage() {
+export default function OfferPage() {
+  const { slug } = useParams<{ slug: string[] }>();
+  const offerSlug = slug?.join("/")?.replace(/\/$/, "");
+  const offerItem = createOfferMap().get(offerSlug || "");
+
+  if (!offerItem) return notFound();
+
   return (
-    <motion.section       initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 1 }} className="relative max-w-[85rem] mx-auto">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="relative max-w-[85rem] mx-auto"
+    >
       <div className="grid grid-cols-12">
         <div className="col-span-12 lg:col-span-6 md:pl-0 lg:pl-0 pt-1 lg:pt-12 lg:pb-12 relative  lg:h-[500px] flex items-center">
           <motion.div
@@ -25,7 +36,7 @@ export default function ContactPage() {
               viewport={{ once: true }}
               className="text-2xl md:text-4xl max-w-lg font-bold leading-10 text-[#fafafa]"
             >
-              Skontaktuj się z EL ROB Elektro Usługi
+              {offerItem.label}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -34,22 +45,19 @@ export default function ContactPage() {
               viewport={{ once: true }}
               className="max-w-xl leading-7 text-gray-300"
             >
-              Masz pytania? Potrzebujesz{" "}
-              <span className="text-[#ff7757]">fachowej pomocy elektryka</span>? Skontaktuj się z{" "}
-              <span className="text-[#ff7757]">EL ROB Elektro Usługi</span> – chętnie pomożemy.
+              {offerItem.customText}
             </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
+            <motion.ul
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
               viewport={{ once: true }}
-              className="text-sm leading-6 text-pretty text-gray-700 dark:text-gray-300"
+              className="leading-7 text-gray-300 list-disc text-sm list-inside"
             >
-              <span>EL ROB Elektro Usługi</span> <br />
-              <span>ul. Pomorska 57/22, 90-204 Łódź</span> <br />
-              <span>737 593 320 | robert.krol.el@gmail.com</span> <br />
-              <span>NIP: 7251759341</span>
-            </motion.p>
+              {offerItem.details?.map((e) => (
+                <motion.li key={e}>{e}</motion.li>
+              ))}
+            </motion.ul>
           </motion.div>
         </div>
         <motion.div

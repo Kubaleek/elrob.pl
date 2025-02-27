@@ -89,7 +89,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href={"/montaz-i-modernizacja-instalacji-elektrycznych"}
+                  href={"/oferta/montaz-i-modernizacja-instalacji-elektrycznych"}
                   className="text-muted-foreground hover:text-foreground"
                 >
                   Montaż i modernizacja instalacji elektrycznych
@@ -97,7 +97,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={"/fotowoltaika-Instalacje-solarne"}
+                  href={"/oferta/fotowoltaika-Instalacje-solarne"}
                   className="text-muted-foreground hover:text-foreground"
                 >
                   Fotowoltaika Instalacje solarne
@@ -105,7 +105,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={"/aparatura-kontrolno-pomiarowa-i-automatyka"}
+                  href={"/oferta/aparatura-kontrolno-pomiarowa-i-automatyka"}
                   className="text-muted-foreground hover:text-foreground"
                 >
                   Aparatura kontrolno-pomiarowa i automatyka
@@ -113,7 +113,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={"/urzadzenia-w-wykonaniu-przeciwwybuchowym"}
+                  href={"/oferta/urzadzenia-w-wykonaniu-przeciwwybuchowym"}
                   className="text-muted-foreground hover:text-foreground"
                 >
                   Urządzenia w wykonaniu przeciwwybuchowym
@@ -121,7 +121,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={"/serwis-i-konserwacja-urzadzen-elektrotermicznych"}
+                  href={"/oferta/serwis-i-konserwacja-urzadzen-elektrotermicznych"}
                   className="text-muted-foreground hover:text-foreground"
                 >
                   Serwis i konserwacja urządzeń elektrotermicznych
@@ -129,7 +129,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={"/instalacja-i-konserwacja-oswietlenia-ulicznego"}
+                  href={"/oferta/instalacja-i-konserwacja-oswietlenia-ulicznego"}
                   className="text-muted-foreground hover:text-foreground"
                 >
                   Instalacja i konserwacja oświetlenia ulicznego
