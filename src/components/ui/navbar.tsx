@@ -36,7 +36,7 @@ export default function Navbar() {
                       {item.label}
                     </NavigationMenuTrigger>
                   ) : (
-                    <Link href={item.url} passHref>
+                    <Link href={`${item.url}`} passHref>
                       <span
                         className={` ${
                           path == item.url
@@ -78,7 +78,7 @@ export default function Navbar() {
                                       ? "bg-[#ff7757]/5 text-[#ff7757]/80"
                                       : "hover:bg-[#ff7757]/5 hover:text-[#ff7757]/80 text-white"
                                   } group flex flex-col gap-2 text-sm leading-[110%] px-4 py-4 rounded-md transition duration-200`}
-                                  href={item.url}
+                                  href={`${item.url}`}
                                   passHref
                                 >
                                      <div className="text-base font-medium leading-none">

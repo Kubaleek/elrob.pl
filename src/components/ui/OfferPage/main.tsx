@@ -8,7 +8,8 @@ import createOfferMap from "@/lib/offerMap";
 import { notFound, useParams } from "next/navigation";
 
 export default function OfferContent() {
-    const { slug } = useParams<{ slug: string[] }>();
+    const params = useParams<{ slug: string[] }>();
+    const slug = params?.slug;
     const offerSlug = slug?.join("/")?.replace(/\/$/, "");
     const offerItem = createOfferMap().get(offerSlug || "");
   
