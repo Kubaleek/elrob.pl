@@ -1,4 +1,4 @@
-![Strona EL ROB Elektro Usługi](./public/img/website.png)
+![Strona EL ROB Elektro Usługi](./public/website.png)
 
 ## 📑 Spis Projektu
 
