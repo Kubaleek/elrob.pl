@@ -1,0 +1,72 @@
+export const siteConfigs: Site = {
+  name: "EL-ROB Elektro Usługi Łódź – Profesjonalne Instalacje Elektryczne",
+  description:
+    "EL-ROB Elektro Usługi Łódź – specjalizujemy się w instalacjach elektrycznych, modernizacjach, serwisie i pomiarach. Gwarantujemy wysoką jakość usług i bezpieczeństwo. Skontaktuj się z nami!",
+  url: "http://localhost:3000/",
+  keywords: [
+    "elektryk Łódź",
+    "usługi elektryczne Łódź",
+    "instalacje elektryczne",
+    "modernizacja instalacji elektrycznych",
+    "serwis elektryczny",
+    "naprawa instalacji elektrycznych",
+    "montaż instalacji elektrycznych",
+    "pomiary elektryczne",
+    "bezpieczeństwo instalacji elektrycznych",
+    "elektroinstalacje",
+    "doradztwo elektryczne",
+    "przeglądy elektryczne",
+    "instalacja oświetlenia",
+    "instalacja przemysłowa",
+    "instalacja domowa",
+    "automatyka budynkowa",
+    "sterowanie oświetleniem",
+    "systemy alarmowe",
+    "instalacja fotowoltaiczna",
+    "energetyka",
+    "efektywność energetyczna",
+    "usługi elektroinstalacyjne",
+    "projektowanie instalacji elektrycznych",
+    "prace instalacyjne",
+    "awarie elektryczne",
+    "elektryka komercyjna",
+    "elektryka dla firm",
+    "elektryka dla domu",
+    "pomiar rezystancji uziemienia",
+    "instalacja zabezpieczeń elektrycznych",
+  ],
+
+  authors: [
+    {
+      name: "Kuba `Kubalek` Król",
+      url: "https://github.com/Kubaleek",
+    },
+  ],
+  creator: "KubalekDev",
+  publisher: "EL-ROB Elektro Usługi",
+  icons: {
+    icon: [
+      {
+        url: "/logo192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        url: "/logo512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+  },
+  openGraph: {
+    type: "website",
+    image: "/website.png",
+    locale: "pl_PL",
+    url: "http://localhost:3000/",
+    title: "EL-ROB Elektro Usługi Łódź – Profesjonalne Instalacje Elektryczne",
+    description:
+      "EL-ROB Elektro Usługi Łódź – specjalizujemy się w instalacjach elektrycznych, modernizacjach, serwisie i pomiarach. Gwarantujemy wysoką jakość usług i bezpieczeństwo. Skontaktuj się z nami!",
+    siteName: "EL-ROB Elektro Usługi Łódź",
+  },
+  manifest: "/site.webmanifest",
+};
