@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${interSans.variable} antialiased text-[#fafafa] bg-[#0C0C0C] text-sm sm:text-base  max-h-svh`}
+        className={`${interSans.variable} antialiased text-[#fafafa] bg-[#0C0C0C] relative text-sm sm:text-base  max-h-svh`}
       >
         <WebsiteMounted>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
